@@ -1,0 +1,11 @@
+name = "enryo-no-katamari"
+main = "src/index.ts"
+type = "javascript"
+
+[env.production]
+vars = { HUGO_VERSION = "0.168.0" }
+
+[build]
+command = "./build.sh"
+cwd = "."
+watch_paths = ["content/**/*.md", "content/**/*.jpg", "content/**/*.png", "layouts/**/*.html", "hugo.toml"]
