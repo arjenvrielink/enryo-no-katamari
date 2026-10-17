@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, 
+          initial-scale=1.0" />
+    <title>{{ .Title }}</title>
+    {{ partial "gallerydeluxe/head.html" . }}
+  </head>
+
+  {{ $gallery := partial "gallerydeluxe/init.html" (dict "sourcePath" "images") }}
+  {{ $params := site.Params.gallerydeluxe }}
+  
+  <body id="gallerydeluxe" data-gd-image-data-url="{{ $gallery.imageDataUrl }}">
+    <div id="gd-modal" class="gd-modal">
+      <span id="gd-modal-close" class="gd-modal-close">&times;</span>
+      {{ if $params.enable_exif }}
+        <div id="gd-modal-exif" class="gd-modal-exif"></div>
+      {{ end }}
+    </div>
+  </body>
+</html>

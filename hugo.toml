@@ -1,0 +1,35 @@
+baseURL = 'https://example.org/'
+locale = 'en-us'
+title = 'Enryo No Katamari'
+theme = 'gallerydeluxe'
+
+disableKinds = ["section", "taxonomy", "term"]
+
+[params]
+    [params.gallerydeluxe]
+        shuffle = false
+        reverse = true
+        enable_exif = true
+
+[build]
+    [[build.cacheBusters]]
+        source = 'content/.*\.(png|jpg|jpeg)'
+        target = '(json)'
+    [[build.cacheBusters]]
+        source = 'layouts/.*'
+        target = '(json)'
+
+[caches]
+    [caches.images]
+        dir    = ':cacheDir/gallerydeluxe'
+        maxAge = "4320h"
+
+[imaging]
+    resampleFilter = "CatmullRom"
+    anchor         = "smart"
+    [imaging.jpeg]
+        quality = 71
+    [imaging.exif]
+        disableDate    = false
+        disableLatLong = true
+        includeFields  = 'Artist|LensModel|FNumber|ExposureTime'

@@ -1,0 +1,29 @@
+# Hugo build output
+/public/
+/resources/
+
+# Hugo cache directories
+.hugo_build.lock
+
+# Go modules
+go.sum
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Temporary files
+*.tmp
+.cache/
