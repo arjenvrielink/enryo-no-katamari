@@ -1,0 +1,16 @@
+name = "enryo-no-katamari"
+type = "javascript"
+compatibility_date = "2024-10-12"
+
+[build]
+command = ""
+cwd = "."
+
+[build.upload]
+format = "modules"
+
+[assets]
+directory = "public"
+
+[observability]
+enabled = true
